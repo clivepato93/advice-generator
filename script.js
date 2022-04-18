@@ -28,5 +28,6 @@ const getAdvice = function(){
 console.log(getAdvice())
 
 dice.addEventListener('click',function () {
+    console.log('test')
     main.style.backgroundColor ='pink';
 })
