@@ -71,7 +71,7 @@ main{
     top: 91%;
     left: 47%;
     content: ' ';
-
+    border: 2px solid var(--Neon-Green);
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
