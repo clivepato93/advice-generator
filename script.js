@@ -1,3 +1,7 @@
+if (gravdept.isIos()) {
+    document.querySelector('html').classList.add('is-ios');
+}
+
 
 const main = document.querySelector('main');
 const advice = document.querySelector('.advice');
