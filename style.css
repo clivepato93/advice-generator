@@ -91,3 +91,30 @@ main{
     width: 2rem;
     height: 2rem;
 }
+
+@media screen and  (max-width:50rem)  {
+    main{
+        position: relative;
+        background-color: var(--grey);
+        width: 35rem;
+        text-align: center;
+        border-radius: 2rem;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image{
+        background-image: url(images/pattern-divider-mobile.svg);
+        width:85%;
+        height: 3rem;
+        background-repeat: no-repeat;
+        margin:4rem 0;
+    
+    }
+    
+    .dice{
+        left: 42%;
+    }
+}
