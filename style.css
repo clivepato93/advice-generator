@@ -98,7 +98,6 @@ main{
 
 @media screen and  (max-width:50rem)  {
     main{
-        position: relative;
         background-color: var(--grey);
         width: 35rem;
         text-align: center;

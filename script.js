@@ -1,6 +1,6 @@
-if (gravdept.isIos()) {
-    document.querySelector('html').classList.add('is-ios');
-}
+// if (gravdept.isIos()) {
+//     document.querySelector('html').classList.add('is-ios');
+// }
 
 
 const main = document.querySelector('main');
