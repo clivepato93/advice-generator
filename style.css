@@ -69,7 +69,7 @@ main{
 .dice{
     position: absolute;
     top: 91%;
-    left: 47%;
+    left: 46.5%;
     content: ' ';
     border: 2px solid var(--Neon-Green);
     width: 5rem;
