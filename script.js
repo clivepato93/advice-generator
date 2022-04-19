@@ -1,52 +1,48 @@
-// if (gravdept.isIos()) {
-//     document.querySelector('html').classList.add('is-ios');
-// }
+// API used https://api.adviceslip.com/
 
-
-const main = document.querySelector('main');
-const advice = document.querySelector('.advice');
+// Elements required from the DOM to make the app work
+const adviceDiv = document.querySelector('.advice');
 const dice = document.querySelector('.dice');
 
-
-
+// Data in order to render the HTML from the API
 function renderHTML(data){
-    console.log(data.id, data.advice)
-    const html =  `<p class="title">Advice #<span id="advice-id">${data.id}</span></p>
-    <p class="text">${data.advice}</p>`
-    advice.innerHTML = html;
+
+    const id = data.id;
+    const advice = data.advice;
+
+    const html =  `
+    <p class="title">Advice #<span id="advice-id">${id}</span></p>
+    <p class="text">${advice}</p>`
+
+    // replaces inner HTML with the following markup above
+    adviceDiv.innerHTML = html;
 }
 
-const getAdvice = function(){
-    fetch(`https://api.adviceslip.com/advice/${117}`).then(function (response) {
-        
-        console.log(response);
+/* 
+function which takes in a Id (optional) then makes an API
+call using  fetch then we get a promised returned back to us
+in JSON format so we then convert to a object
+
+*/
+const getAdvice = function(id){
+
+    let request = id?`https://api.adviceslip.com/advice/${id}`:`https://api.adviceslip.com/advice`;
+
+    fetch(`${request}`).then(function (response) {
         return response.json();
     }).then(function (data) {
-        const {slip} = data
-        renderHTML(slip)
-        console.log(slip)
-        return slip
-        
+        // Destructing of object done here easier then doing data.slip
+        const {slip} = data;
+        // call to the render function 
+        renderHTML(slip)        
     })
 }
 
+// initial call 
+getAdvice(117);
 
-const getAdvice2 = function(){
-    fetch(`https://api.adviceslip.com/advice`).then(function (response) {
-        
-        console.log(response);
-        return response.json();
-    }).then(function (data) {
-        const {slip} = data
-        renderHTML(slip)
-        console.log(slip)
-        return slip
-        
-    })
-}
 
-console.log(getAdvice())
-
+// in order to generate more advice quotes
 dice.addEventListener('click',function () {
-   setTimeout(getAdvice2,2000) 
+   setTimeout(getAdvice,2000) 
 })

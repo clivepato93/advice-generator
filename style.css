@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Overpass&display=swap');
 
+
+/* colours for the theme */
 :root{
     --Light-Cyan: hsl(193, 38%, 86%);
     --Neon-Green: hsl(150, 100%, 66%);
@@ -9,19 +11,22 @@
     --grey:#30394a;
 }
 
+/* removal of default settings css provides */
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.is-ios * {
-    cursor: pointer;
-}
-
+/* 
+default font size set so its easier to work with REM's 
+so now its set to 62.5% 1rem equal 10px 
+*/
 html{
     font-size: 62.5%;
 }
+
 
 body{
     background-color: var(--Dark-Blue);
@@ -86,6 +91,7 @@ main{
     cursor: pointer;
 }
 
+/* pseudo classes being used */
 .dice:hover{
     background-color:#94ffbd;
 }
@@ -96,6 +102,8 @@ main{
     height: 2rem;
 }
 
+
+/* for smaller screens */
 @media screen and  (max-width:50rem)  {
     main{
         background-color: var(--grey);
