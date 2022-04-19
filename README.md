@@ -73,7 +73,7 @@ const getAdvice = function(id){
 
 Feel free to check me out on 
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/clivepato93)
-- Twitter - [@yourusername](https://www.twitter.com/ciccio_ct93)
+- Frontend Mentor - [@clivepato93](https://www.frontendmentor.io/profile/clivepato93)
+- Twitter - [@ciccio_ct93](https://www.twitter.com/ciccio_ct93)
 
 
