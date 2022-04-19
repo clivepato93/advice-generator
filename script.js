@@ -11,7 +11,7 @@ function renderHTML(data){
     const advice = data.advice;
 
     const html =  `
-    <blockquote class="title">Advice #<span id="advice-id">${id}</span></blockquote>
+    <h1 class="title">Advice #<span id="advice-id">${id}</span></h1>
     <blockquote class="text">${advice}</blockquote>`
 
     // replaces inner HTML with the following markup above
