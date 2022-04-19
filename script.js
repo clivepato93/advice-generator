@@ -11,8 +11,8 @@ function renderHTML(data){
     const advice = data.advice;
 
     const html =  `
-    <p class="title">Advice #<span id="advice-id">${id}</span></p>
-    <p class="text">${advice}</p>`
+    <blockquote class="title">Advice #<span id="advice-id">${id}</span></blockquote>
+    <blockquote class="text">${advice}</blockquote>`
 
     // replaces inner HTML with the following markup above
     adviceDiv.innerHTML = html;
